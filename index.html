@@ -583,7 +583,7 @@
 	  stopfps += 1
 	  // if pressed ONLY once
 	  if (stopfps === 1) {
-	    window.location.href = "javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='https://mrdoob.github.io/stats.js/build/stats.min.js';document.head.appendChild(script);})()"
+	    window.location.href = "javascript:(function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='./stats.min.js';document.head.appendChild(script);})()"
         }
 		// so it can't go crazy high, but can't be activated again
 		if (stopfps >= 5) {
@@ -628,10 +628,10 @@
 		// Get Files
       function manifestFiles()
       {
-        return [ "https://sleepie.uk/undertale/runner.data",
-"https://sleepie.uk/undertale/runner.js",
-"https://sleepie.uk/undertale/runner.wasm",
-"https://sleepie.uk/undertale/audio-worklet.js",
+        return [ "./runner.data",
+"./runner.js",
+"./runner.wasm",
+"./audio-worklet.js",
 "https://sleepie.uk/undertale/game.unx" ].join( ";");
       }
 
@@ -809,7 +809,6 @@ function runCommand(command) {
 
     </script>
 	<!-- Load Main Game Runner JS File -->
-    <script async type="text/javascript" src="https://sleepie.uk/undertale/runner.js"></script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"b1b22ad9c03149bc8397e1029210dba5","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+    <script async type="text/javascript" src="./runner.js"></script>
 </body>
 </html>
